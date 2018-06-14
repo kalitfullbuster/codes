@@ -1,0 +1,23 @@
+#include<stdio.h>
+struct process
+	{
+	float pid;
+	float BT;
+	float priority;
+	}p[10];
+struct result{
+		float wtime;
+		float ttime;
+};
+
+void main()
+	{
+		struct process a[5];
+		struct result b[5];
+		float aw=0;
+		int i;
+		float avgwt=0;
+		float avgtt=0;
+		printf("enter details:");
+		for(i=0;i<S
+

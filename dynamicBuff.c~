@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<unistd.h>
+#define MAX 255
+void main(){
+	pid_t pid;
+	int fd[2],n;
+	pipe(fd);
+	char buff[MAX];
+	char readBuff[MAX];
+	pid=fork();
+	if(pid==0){
+		close(fd[0]);
+		n=read(0,readBuff,MAX);
+		write(fd[1],readBuff,n);
+		}
+	else if(pid>0){
+		
+		close(fd[1]);
+		n=read(0,readBuff,MAX);
+		write(1,readBuff,n);
+		}
+	 
+	}
