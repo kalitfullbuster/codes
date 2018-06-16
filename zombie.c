@@ -10,7 +10,7 @@ int main()
 		printf("I eat Brains");
 	}	
 	else if(pid==0)
-		printf("My parent turned into a Zombie,I think his pid is %d plz check his status using top command",getpid()-1);
+		printf("My parents turned into  Zombies,I think his pid is %d plz check his status using top command",getpid()-1);
 	while(1==1)
 	{
 		printf("10");
